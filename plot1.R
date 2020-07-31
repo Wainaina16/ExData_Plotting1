@@ -1,9 +1,7 @@
 setwd("C:/Users/Andrew Chira/Documents/R/R-scripts/exdata_data_household_power_consumption")
  getwd()
-[1] "C:/Users/Andrew Chira/Documents/R/R-scripts/exdata_data_household_power_consumption"
- powerDT <- data.table::fread(input = "household_power_consumption.txt"
-                              , na.strings="?"
- )
+"C:/Users/Andrew Chira/Documents/R/R-scripts/exdata_data_household_power_consumption"
+ powerDT <- data.table::fread(input = "household_power_consumption.txt, na.strings="?")
  
  # Prevents histogram from printing in scientific notation
  powerDT[, Global_active_power := lapply(.SD, as.numeric), .SDcols = c("Global_active_power")]
